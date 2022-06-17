@@ -6,12 +6,12 @@ const Greeting = (greeting) => {
     const date = new Date
     let time = date.getHours()
 
-    if (time === 0 || time <= 11){
+    if (time < 12){
 
         return greeting="Good Morning, schedule your task."
     }
 
-    else if (time >=12 || time >=15){
+    else if (time > 18){
 
         return greeting="Good Afternoon, schedule your task."
     }

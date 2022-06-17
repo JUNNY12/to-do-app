@@ -15,6 +15,7 @@ import Greeting from "../utils/Greeting";
 import Dexie from "dexie"
 import { useLiveQuery } from "dexie-react-hooks"
 import { useState } from "react"
+import Typewriter from "typewriter-effect"
 
 
 
@@ -92,7 +93,15 @@ const Todo = () => {
 return (
     <div>
             <>
-                <GreetingHeader>{Greeting()}</GreetingHeader>
+                <GreetingHeader>
+                <Typewriter
+                    options={{
+                        strings: Greeting(),
+                        autoStart: true,
+                        loop: true,
+                    }}
+/>
+                </GreetingHeader>
             </>
 
             <>
